@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --accent-primary: #8b5cf6;
+  --accent-secondary: #06b6d4;
+  --border-color: #e5e7eb;
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.Welcome-text {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    linear-gradient(90.01deg, #7c3aed 0.01%, #3b82f6 50.01%, #06b6d4 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: end;
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #0000001f;
+  display: flex;
+  position: relative;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.button-primary {
+  background: linear-gradient(
+      180deg,
+      rgba(139, 92, 246, 0.1) 0%,
+      rgba(139, 92, 246, 0.3) 100%
+    ),
+    rgba(139, 92, 246, 0.15);
+  box-shadow: inset 0 0 12px #8b5cf63d;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.button-primary:hover {
+  
+  box-shadow: inset 0 0 12px #8b5cf670;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Animación del carrusel infinito */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 20s linear infinite;
+}
+
+/* HERO STYLES - Secciones más compactas */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  width: 100%;
+  background: var(--bg-primary);
+  padding: 1rem 2rem 6rem 2rem;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .hero-content-wrapper {
+    flex-direction: row;
+    gap: 3rem;
+    height: 75vh;
+  }
+}
+
+.hero-text-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero-text-section {
+    width: 45%;
+  }
+}
+
+.hero-video-section {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero-video-section {
+    width: 55%;
+  }
+}
+
+.video-element {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 100%; 
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 5;
+  object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+  .video-element {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-element {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* HERO CONTENT STYLES - TEMA CLARO */
+.hero-content-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 25;
+}
+
+.Welcome-box {
+  padding: 8px 16px;
+}
+
+.Welcome-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 5rem;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description-text {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: 1.25rem 0;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.cta-button-wrapper {
+  margin-bottom: 3rem;
+}
+
+.button-primary {
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 250px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  transform: scale(1.05);
+}
+
+/* CARRUSEL COMO CINTA INFERIOR */
+.tech-carousel-ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 30;
+}
+
+.tech-carousel-ribbon .carousel-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6rem;
+  z-index: 35;
+}
+
+.tech-carousel-ribbon .left-overlay {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.tech-carousel-ribbon .right-overlay {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.tech-carousel-ribbon .carousel-track {
+  display: flex;
+  white-space: nowrap;
+  animation: infinite-scroll 20s linear infinite;
+}
+
+.tech-carousel-ribbon .carousel-set {
+  display: flex;
+  align-items: center;
+}
+
+.tech-carousel-ribbon .tech-item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  min-width: 110px;
+  justify-content: center;
+  height: 45px;
+}
+
+.tech-carousel-ribbon .tech-item:hover {
+  background: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-primary);
+}
+
+.tech-carousel-ribbon .tech-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%);
+}
+
+.tech-carousel-ribbon .tech-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.75rem;
+}
+
+/* Hide scrollbar */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras de rendimiento */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 1rem 1rem 5rem 1rem;
+  }
+  
+  .hero-content-wrapper {
+    height: 70vh;
+    gap: 1.5rem;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .button-primary {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  
+  .video-wrapper {
+    max-width: 400px;
+  }
+  
+  .tech-carousel-ribbon .tech-item {
+    min-width: 90px;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    height: 40px;
+  }
+  
+  .tech-carousel-ribbon .tech-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4rem;
+  }
+  
+ 
+  .cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Asegurar que el texto nunca quede detrás del video */
+@media (min-width: 1024px) {
+  .hero-text-section {
+    order: 1;
+  }
+  
+  .hero-video-section {
+    order: 2;
+  }
+  
+  .hero-content-wrapper {
+    position: relative;
+  }
+  
+  .hero-text-section,
+  .hero-content-inner,
+  .content-wrapper {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+/* Efectos de fondo sutiles para tema claro */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* CARRUSEL CON PNG - ESTILOS ACTUALIZADOS */
+.tech-carousel-ribbon .tech-item {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+  height: 70px;
+  gap: 0.5rem;
+}
+
+.tech-carousel-ribbon .tech-item:hover {
+  background: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-primary);
+}
+
+/* Estilos específicos para imágenes PNG */
+.tech-carousel-ribbon .tech-image-png {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* Remover cualquier filtro que afecte los colores */
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.tech-carousel-ribbon .tech-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Ajustes responsive para PNG */
+@media (max-width: 768px) {
+  .tech-carousel-ribbon .tech-item {
+    min-width: 100px;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    height: 45px;
+    gap: 0.4rem;
+  }
+  
+  .tech-carousel-ribbon .tech-image-png {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .tech-carousel-ribbon .tech-name {
+    font-size: 0.7rem;
+  }
+}
+
+/* Asegurar que todas las imágenes PNG mantengan sus colores originales */
+.tech-carousel-ribbon img {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Navbar height fijo para evitar saltos */
+nav {
+  height: 80px;
+}
+
+/* Responsive spacing para navbar container si necesitas más control */
+@media (max-width: 768px) {
+  nav .container {
+    padding: 1rem;
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+/* Clases de utilidad */
+.hover-float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #000 0%, #333 50%, #000 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 3s infinite linear;
+}
