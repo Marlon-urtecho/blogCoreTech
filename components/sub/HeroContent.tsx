@@ -42,7 +42,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="description-text"
         >
-          Experience business growth with our customized software development & support services.
+        Experimente el crecimiento con nuestros servicios de soporte y desarrollo de software personalizados.
         </motion.p>
         
         <motion.div
@@ -50,7 +50,7 @@ const HeroContent = () => {
           className="cta-button-wrapper"
         >
           <button className="button-primary">
-            Consult Our Experts
+            Consulte a expertos
           </button>
         </motion.div>
       </div>

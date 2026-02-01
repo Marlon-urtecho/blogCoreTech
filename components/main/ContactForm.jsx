@@ -156,7 +156,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                     <FiUser className="text-gray-400" />
-                    Nombre Completo *
+                    Nombre Completo 
                   </label>
                   <input
                     type="text"
@@ -175,7 +175,7 @@ const ContactForm = () => {
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                       <FiMail className="text-gray-400" />
-                      Email *
+                      Email 
                     </label>
                     <input
                       type="email"
@@ -229,7 +229,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                     <FiMessageSquare className="text-gray-400" />
-                    Mensaje *
+                    Mensaje 
                   </label>
                   <textarea
                     name="message"
@@ -267,7 +267,7 @@ const ContactForm = () => {
 
                 {/* Nota */}
                 <p className="text-gray-500 text-sm text-center">
-                  * Campos requeridos. No compartimos tu información con terceros.
+                  Campos requeridos. No compartimos tu información con terceros.
                 </p>
               </form>
             </motion.div>
@@ -291,7 +291,7 @@ const ContactForm = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Teléfono</h4>
                       <p className="text-gray-300">+505 12345678</p>
-                      <p className="text-sm text-gray-400">Lunes a Viernes: 9am - 6pm</p>
+                      <p className="text-sm text-gray-400">Lunes a Viernes: 8am - 5pm</p>
                     </div>
                   </div>
 

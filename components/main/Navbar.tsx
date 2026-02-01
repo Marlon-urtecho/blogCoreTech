@@ -16,7 +16,6 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Efecto para detectar scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -25,7 +24,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Manejar submit de búsqueda
+  
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -33,7 +32,7 @@ const Navbar = () => {
     }
   };
 
-  // Variantes para animaciones
+  // Variantes
   const menuItemVariants = {
     initial: { y: 0, opacity: 1 },
     hover: { 
@@ -204,7 +203,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       <ResponseMenu open={isMenuOpen} closeMenu={() => setIsMenuOpen(false)} />
       
-      {/* Botón flotante de contacto - Aparece en TODA la app */}
+      {/* Botón flotante de contacto*/}
       <FloatingContactButton />
     </>
   );

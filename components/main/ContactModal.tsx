@@ -191,7 +191,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg 
+                className={`w-full py-3.5 bg-black from-primary to-secondary text-white font-semibold rounded-lg 
                           flex items-center justify-center gap-2 transition-all ${isSubmitting ? 'opacity-80' : 'hover:shadow-lg'}`}
               >
                 {isSubmitting ? (

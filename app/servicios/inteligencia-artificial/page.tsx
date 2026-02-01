@@ -35,6 +35,128 @@ const IAProposalsPage = () => {
 
   const services = [
     {
+      id: 'automatizacion-flujos',
+      category: 'Productividad',
+      title: 'Automatización de Flujos de Trabajo',
+      subtitle: 'Conecta todas tus aplicaciones con IA',
+      icon: <SiN8N className="text-4xl" />,
+      color: 'from-orange-500 to-yellow-400',
+      
+      overview: {
+        description: 'Orquestación inteligente de procesos empresariales conectando 500+ aplicaciones con toma de decisiones automatizada basada en IA.',
+        target: 'Todas las empresas con múltiples sistemas',
+        timeToValue: '3-4 semanas',
+        successRate: '92%'
+      },
+
+      pricing: {
+        packages: [
+          {
+            name: 'Departamental',
+            price: '$2,500/mes',
+            features: [
+              'Hasta 10 workflows',
+              '5 aplicaciones conectadas',
+              'Automatización básica',
+              'Soporte básico',
+              'Dashboard simple'
+            ],
+            bestFor: 'Un departamento'
+          },
+          {
+            name: 'Empresarial',
+            price: '$8,500/mes',
+            features: [
+              'Workflows ilimitados',
+              '50 aplicaciones conectadas',
+              'Toma de decisiones con IA',
+              'Soporte prioritario 24/7',
+              'Dashboards avanzados',
+              'API management'
+            ],
+            bestFor: 'Empresa completa',
+            popular: true
+          },
+          {
+            name: 'Corporativo',
+            price: '$15,000/mes',
+            features: [
+              'Todo en Empresarial +',
+              'Custom development',
+              'Integración con sistemas legacy',
+              'Soporte dedicado onsite',
+              'ROI garantizado',
+              'Training completo'
+            ],
+            bestFor: 'Corporaciones grandes'
+          }
+        ]
+      },
+
+      technologies: {
+        platform: ['n8n Pro', 'Zapier Enterprise', 'Custom Automation Engine'],
+        integrations: ['REST APIs', 'Webhooks', 'Database Connections', 'Legacy Systems'],
+        ai: ['Decision Trees', 'ML Models', 'Natural Language Processing']
+      },
+
+      timeline: {
+        phases: [
+          { week: '1', task: 'Mapeo de procesos actuales', status: 'Análisis' },
+          { week: '2-3', task: 'Desarrollo de workflows', status: 'Desarrollo' },
+          { week: '4', task: 'Implementación y testing', status: 'Implementación' },
+          { week: '5-6', task: 'Optimización y escalado', status: 'Optimización' }
+        ]
+      },
+
+      servicesIncluded: [
+        'Análisis completo de procesos',
+        'Desarrollo de workflows personalizados',
+        'Integración con todas tus aplicaciones',
+        'Capacitación del equipo',
+        'Soporte técnico ilimitado',
+        'Monitoreo 24/7',
+        'Optimización continua'
+      ],
+
+      benefits: [
+        {
+          title: 'Reducción Manual',
+          value: '80%',
+          description: 'De procesos manuales',
+          icon: <FiUsers />
+        },
+        {
+          title: 'Velocidad',
+          value: '15x',
+          description: 'Más rápido que procesos manuales',
+          icon: <FiZap />
+        },
+        {
+          title: 'Error Cero',
+          value: '100%',
+          description: 'En procesos automatizados',
+          icon: <FiCheck />
+        },
+        {
+          title: 'ROI',
+          value: '6 meses',
+          description: 'Tiempo promedio para ROI',
+          icon: <FiTrendingUp />
+        }
+      ],
+
+      caseStudy: {
+        client: 'Tech Services Inc',
+        challenge: '15 sistemas desconectados, procesos manuales repetitivos',
+        solution: 'Automatización completa de flujos de trabajo',
+        results: [
+          'Eliminación del 70% de tareas manuales',
+          'Ahorro de $250,000 anuales en salarios',
+          'ROI del 450% en 5 meses'
+        ]
+      }
+    },
+    {
       id: 'crm-ia',
       category: 'CRM & Automatización',
       title: 'CRM Inteligente con IA Embebida',
@@ -402,128 +524,7 @@ const IAProposalsPage = () => {
       }
     },
 
-    {
-      id: 'automatizacion-flujos',
-      category: 'Productividad',
-      title: 'Automatización de Flujos de Trabajo',
-      subtitle: 'Conecta todas tus aplicaciones con IA',
-      icon: <SiN8N className="text-4xl" />,
-      color: 'from-orange-500 to-yellow-400',
-      
-      overview: {
-        description: 'Orquestación inteligente de procesos empresariales conectando 500+ aplicaciones con toma de decisiones automatizada basada en IA.',
-        target: 'Todas las empresas con múltiples sistemas',
-        timeToValue: '3-4 semanas',
-        successRate: '92%'
-      },
-
-      pricing: {
-        packages: [
-          {
-            name: 'Departamental',
-            price: '$2,500/mes',
-            features: [
-              'Hasta 10 workflows',
-              '5 aplicaciones conectadas',
-              'Automatización básica',
-              'Soporte básico',
-              'Dashboard simple'
-            ],
-            bestFor: 'Un departamento'
-          },
-          {
-            name: 'Empresarial',
-            price: '$8,500/mes',
-            features: [
-              'Workflows ilimitados',
-              '50 aplicaciones conectadas',
-              'Toma de decisiones con IA',
-              'Soporte prioritario 24/7',
-              'Dashboards avanzados',
-              'API management'
-            ],
-            bestFor: 'Empresa completa',
-            popular: true
-          },
-          {
-            name: 'Corporativo',
-            price: '$15,000/mes',
-            features: [
-              'Todo en Empresarial +',
-              'Custom development',
-              'Integración con sistemas legacy',
-              'Soporte dedicado onsite',
-              'ROI garantizado',
-              'Training completo'
-            ],
-            bestFor: 'Corporaciones grandes'
-          }
-        ]
-      },
-
-      technologies: {
-        platform: ['n8n Pro', 'Zapier Enterprise', 'Custom Automation Engine'],
-        integrations: ['REST APIs', 'Webhooks', 'Database Connections', 'Legacy Systems'],
-        ai: ['Decision Trees', 'ML Models', 'Natural Language Processing']
-      },
-
-      timeline: {
-        phases: [
-          { week: '1', task: 'Mapeo de procesos actuales', status: 'Análisis' },
-          { week: '2-3', task: 'Desarrollo de workflows', status: 'Desarrollo' },
-          { week: '4', task: 'Implementación y testing', status: 'Implementación' },
-          { week: '5-6', task: 'Optimización y escalado', status: 'Optimización' }
-        ]
-      },
-
-      servicesIncluded: [
-        'Análisis completo de procesos',
-        'Desarrollo de workflows personalizados',
-        'Integración con todas tus aplicaciones',
-        'Capacitación del equipo',
-        'Soporte técnico ilimitado',
-        'Monitoreo 24/7',
-        'Optimización continua'
-      ],
-
-      benefits: [
-        {
-          title: 'Reducción Manual',
-          value: '80%',
-          description: 'De procesos manuales',
-          icon: <FiUsers />
-        },
-        {
-          title: 'Velocidad',
-          value: '15x',
-          description: 'Más rápido que procesos manuales',
-          icon: <FiZap />
-        },
-        {
-          title: 'Error Cero',
-          value: '100%',
-          description: 'En procesos automatizados',
-          icon: <FiCheck />
-        },
-        {
-          title: 'ROI',
-          value: '6 meses',
-          description: 'Tiempo promedio para ROI',
-          icon: <FiTrendingUp />
-        }
-      ],
-
-      caseStudy: {
-        client: 'Tech Services Inc',
-        challenge: '15 sistemas desconectados, procesos manuales repetitivos',
-        solution: 'Automatización completa de flujos de trabajo',
-        results: [
-          'Eliminación del 70% de tareas manuales',
-          'Ahorro de $250,000 anuales en salarios',
-          'ROI del 450% en 5 meses'
-        ]
-      }
-    }
+    
   ];
 
   const activeServiceData = services.find(s => s.id === activeService) || services[0];

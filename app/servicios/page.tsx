@@ -81,7 +81,7 @@ export default function ServicesPage() {
       href: "/servicios/desarrollo-web",
       icon: <FiGlobe />,
       color: "bg-blue-500",
-      features: ["React", "Vue.js", "Node.js", "Next.js"]
+      features: ["Landing page", "Diseño Responsivo", "Ecomerce", "web Apps"]
     },
     {
       id: 2,
@@ -90,7 +90,7 @@ export default function ServicesPage() {
       href: "/servicios/desarrollo-movil",
       icon: <FiSmartphone />,
       color: "bg-green-500",
-      features: ["iOS", "Android", "Flutter", "React Native"]
+      features: ["iOS", "Android", "Multiplataforma", "UI/UX" ]
     },
     {
       id: 3,
@@ -104,20 +104,20 @@ export default function ServicesPage() {
     {
       id: 4,
       title: "Inteligencia Artificial",
-      description: "Soluciones con IA y Machine Learning",
+      description: "Soluciones con IA y Automatización",
       href: "/servicios/inteligencia-artificial",
       icon: <FaRobot />,
       color: "bg-pink-500",
-      features: ["ML", "NLP", "Chatbots", "Computer Vision"]
+      features: ["Automatización", "NLP", "Chatbots", "Computer Vision"]
     },
     {
       id: 5,
-      title: "Big Data & Analytics",
+      title: "Transformación Digital",
       description: "Análisis y procesamiento de datos",
-      href: "/servicios/big-data",
-      icon: <FaDatabase />,
+      href: "/servicios/transformacion-digital",
+      icon: <FiServer />,
       color: "bg-orange-500",
-      features: ["Analytics", "BI", "Data Warehousing", "Dashboards"]
+      features: ["Análisis de datos", "Reportes Kpi's", "Respaldo de datos", "Dashboards"]
     },
     {
       id: 6,
@@ -314,7 +314,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {methodologies.map((method, index) => (
             <motion.div
               key={method.step}
@@ -322,10 +322,11 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center"
+              className="text-center text-gray-700"
+              
             >
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full 
-                           flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                           flex items-center justify-center text-black font-bold text-xl mx-auto mb-4">
                 {method.step}
               </div>
               <h4 className="font-bold text-gray-900 mb-2">{method.title}</h4>
@@ -347,8 +348,8 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold 
-                     rounded-lg hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1c3D5B] text-white font-semibold 
+                     rounded-lg hover:bg-[#1c3D5B]/90 transition-colors"
           >
             <span>Contactar Ahora</span>
             <FiArrowRight />

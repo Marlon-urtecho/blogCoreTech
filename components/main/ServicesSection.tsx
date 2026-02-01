@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FiAirplay, FiArrowRight, FiCheckCircle, FiCode, FiSmartphone, FiTrendingUp } from "react-icons/fi";
+import { FiAirplay, FiArrowRight, FiCheckCircle, FiCode, FiDatabase, FiServer, FiSmartphone, FiTrendingUp } from "react-icons/fi";
 import { FaRobot } from "react-icons/fa";
 
 const SimpleServices = () => {
@@ -16,97 +16,109 @@ const SimpleServices = () => {
       id: 1,
       icon: <FiSmartphone />,
       title: "Desarrollo de Aplicaciones Móviles",
+      description: "Soluciones móviles nativas y multiplataforma para iOS y Android",
       items: [
         "Desarrollo de Apps para iOS",
         "Desarrollo de Apps para Android",
-        "Desarrollo con Flutter",
-        "Desarrollo con React Native"
+        "Aplicaciones Híbridas",
+        "Diseño UI/UX Móvil"
       ],
-      color: "bg-gradient-to-br from-blue-500 to-cyan-400",
+      bgImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      color: "from-blue-900/70 to-blue-600/70",
       borderColor: "border-blue-200",
       hoverColor: "hover:border-blue-300",
       route: "/servicios/",
-      buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]"  
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]"  
     },
     {
       id: 2,
       icon: <FiAirplay />, 
       title: "Desarrollo Web",
+      description: "Aplicaciones web modernas y escalables con las últimas tecnologías",
       items: [
-        "Node JS con MongoDB",
-        "Desarrollo Web con Java",
-        "Desarrollo con React JS",
-        "Desarrollo con Vue JS"
+        "Interfaz moderna con UX/UI",
+        "Diseño Responsivo",
+        "Soluciones Integrales",
+        "Optimización SEO"
       ],
-      color: "bg-gradient-to-br from-blue-500 to-cyan-400",
-      borderColor: "border-primary/30",
+      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80",
+      color: "from-purple-900/70 to-purple-600/70",
+      borderColor: "border-purple-200",
       route: "/servicios/",
-      hoverColor: "hover:border-primary/50",
-      buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]"  
+      hoverColor: "hover:border-purple-300",
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]"  
     },
     {
       id: 3,
       icon: <FiTrendingUp />,
       title: "Marketing Digital",
+      description: "Estrategias digitales para aumentar tu presencia y conversiones",
       items: [
         "SEO On Page",
         "SEO Off Page",
         "Marketing en Redes Sociales",
         "Marketing de Contenidos"
       ],
-      color: "bg-gradient-to-br from-purple-500 to-pink-500",
-      borderColor: "border-purple-200",
+      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      color: "from-green-900/70 to-green-600/70",
+      borderColor: "border-green-200",
       route: "/servicios/",
-      hoverColor: "hover:border-purple-300",
-      buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]"  
+      hoverColor: "hover:border-green-300",
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]"  
     }, 
     {
       id: 4,
-      icon: <FaRobot   />,
-      title: "Aprendizaje automático",
+      icon: <FiCode />,
+      title: "Inteligencia Artificial",
+      description: "Soluciones de IA y Machine Learning para optimizar tu negocio",
       items: [
-        "SEO On Page",
-        "SEO Off Page",
-        "Marketing en Redes Sociales",
-        "Marketing de Contenidos"
+        "Chatbots Inteligentes",
+        "Procesamiento de Lenguaje Natural",
+        "Computer Vision",
+        "Automatización de Procesos"
       ],
-      color: "bg-gradient-to-br from-purple-500 to-pink-500",
-      borderColor: "border-purple-200",
-      hoverColor: "hover:border-purple-300",
+      bgImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      color: "from-orange-900/70 to-orange-600/70",
+      borderColor: "border-orange-200",
+      hoverColor: "hover:border-orange-300",
       route: "/servicios/",
-     buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]" 
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]" 
     }, 
     {
       id: 5,
-      icon: <FaRobot   />,
-      title: "Aprendizaje automático",
+      icon: <FiDatabase />,
+      title: "Data Science",
+      description: "Análisis de datos para tomar decisiones basadas en insights",
       items: [
-        "SEO On Page",
-        "SEO Off Page",
-        "Marketing en Redes Sociales",
-        "Marketing de Contenidos"
+        "Análisis De Datos",
+        "Big Data",
+        "Dashboards Interactivos",
+        "Business Intelligence"
       ],
-      color: "bg-gradient-to-br from-purple-500 to-pink-500",
-      borderColor: "border-purple-200",
-      hoverColor: "hover:border-purple-300",
+      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      color: "from-red-900/70 to-red-600/70",
+      borderColor: "border-red-200",
+      hoverColor: "hover:border-red-300",
       route: "/servicios/",
-     buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]"  
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]"  
     }, 
     {
       id: 6,
-      icon: <FaRobot   />,
-      title: "Aprendizaje automático",
+      icon: <FiServer />,
+      title: "Cloud Computing",
+      description: "Infraestructura en la nube escalable y segura",
       items: [
-        "SEO On Page",
-        "SEO Off Page",
-        "Marketing en Redes Sociales",
-        "Marketing de Contenidos"
+        "Migración a Cloud",
+        "Arquitectura Serverless",
+        "Contenedores y Kubernetes",
+        "DevOps y CI/CD"
       ],
-      color: "bg-gradient-to-br from-purple-500 to-pink-500",
-      borderColor: "border-purple-200",
-      hoverColor: "hover:border-purple-300",
+      bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80",
+      color: "from-indigo-900/70 to-indigo-600/70",
+      borderColor: "border-indigo-200",
+      hoverColor: "hover:border-indigo-300",
       route: "/servicios/",
-      buttonColor: "bg-[#1C3D5B] hover:bg-[#0F1A2A]"  
+      buttonColor: "bg-white/90 hover:bg-white text-[#1C3D5B] hover:text-[#0F1A2A]"  
     }
   ];
 
@@ -190,8 +202,8 @@ const SimpleServices = () => {
           </motion.p>
         </motion.div>
 
-        {/* Grid de servicios con animaciones */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Tarjetas de servicios */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -199,73 +211,137 @@ const SimpleServices = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5, scale: 1.02 }}
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
-              className="relative bg-white rounded-xl shadow-lg p-6 border border-gray-200 transition-all duration-300
-                       hover:shadow-xl group"
+              className="relative h-[400px] rounded-xl shadow-xl overflow-hidden group cursor-pointer"
+              onClick={() => router.push(`/servicios#${service.title.toLowerCase().replace(/ /g, '-')}`)}
             >
+              {/* Background Image con overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110"
+                style={{ backgroundImage: `url('${service.bgImage}')` }}
+              >
+                {/* Overlay gradiente */}
+                <div className={`absolute inset-0 bg-gradient-to-b ${service.color}`} />
+                
+                {/* Overlay adicional al hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              </div>
+
               {/* Efecto de brillo al hover */}
               {hoveredCard === service.id && (
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
                   initial={{ x: "-100%" }}
                   animate={{ x: "100%" }}
                   transition={{ duration: 0.8 }}
                 />
               )}
 
-              {/* Icono con animación */}
-              <motion.div
-                animate={{ 
-                  rotate: hoveredCard === service.id ? [0, 10, -10, 0] : 0,
-                  scale: hoveredCard === service.id ? 1.1 : 1
-                }}
-                transition={{ duration: 0.5 }}
-                className={`inline-flex p-3 rounded-lg ${service.color} text-white mb-4`}
-              >
-                {service.icon}
-              </motion.div>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              
-              <ul className="space-y-3 mb-6">
-                {service.items.map((item, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * idx + index * 0.1 }}
-                    className="flex items-center gap-3 text-gray-600"
+              {/* Contenido principal */}
+              <div className="relative h-full p-6 flex flex-col">
+                {/* Encabezado con icono y título */}
+                <div className="mb-4">
+                  <motion.div
+                    animate={{ 
+                      rotate: hoveredCard === service.id ? [0, 10, -10, 0] : 0,
+                      scale: hoveredCard === service.id ? 1.1 : 1
+                    }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-flex p-3 rounded-lg bg-white/20 backdrop-blur-sm text-white mb-4"
                   >
-                    <motion.div
-                      whileHover={{ scale: 1.2 }}
-                      className="flex-shrink-0"
-                    >
-                      <FiCheckCircle className="text-green-500" />
-                    </motion.div>
-                    <span className="text-sm">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
+                    {service.icon}
+                  </motion.div>
+                  
+                  <motion.h3
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    className="text-xl font-bold text-white mb-2"
+                  >
+                    {service.title}
+                  </motion.h3>
+                  
+                  <motion.p
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="text-white/90 text-sm mb-4"
+                  >
+                    {service.description}
+                  </motion.p>
+                </div>
 
-              {/* Botón con animación */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full mt-4 py-2 ${service.buttonColor} text-white font-medium rounded-lg 
-                         transition-colors flex items-center justify-center gap-2`}
-                onClick={() => router.push(`/servicios#${service.title.toLowerCase().replace(/ /g, '-')}`)}
-              >
-                <span>Más Información</span>
+                {/* Lista de items (se revela al hover) */}
                 <motion.div
-                  animate={{ x: hoveredCard === service.id ? 5 : 0 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="flex-grow"
                 >
-                  <FiArrowRight />
+                  <div className="relative">
+                    {/* Overlay para el texto de los items */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    
+                    <ul className="space-y-2 relative z-10">
+                      {service.items.map((item, idx) => (
+                        <motion.li
+                          key={idx}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.1 * idx + index * 0.1 }}
+                          className="flex items-center gap-2 text-white/80 text-sm"
+                        >
+                          <motion.div
+                            whileHover={{ scale: 1.2 }}
+                            className="flex-shrink-0"
+                          >
+                            <FiCheckCircle className="text-green-300" />
+                          </motion.div>
+                          <span>{item}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
-              </motion.button>
+
+                {/* Botón flotante en la parte inferior */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-auto"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-full py-3 ${service.buttonColor} font-medium rounded-lg 
+                             transition-all duration-300 flex items-center justify-center gap-2
+                             backdrop-blur-sm border border-white/30`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      router.push(`/servicios#${service.title.toLowerCase().replace(/ /g, '-')}`);
+                    }}
+                  >
+                    <span className="font-semibold">Ver Detalles</span>
+                    <motion.div
+                      animate={{ x: hoveredCard === service.id ? 5 : 0 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <FiArrowRight />
+                    </motion.div>
+                  </motion.button>
+                </motion.div>
+              </div>
+
+              {/* Borde con efecto al hover */}
+              <div className={`absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-xl transition-all duration-300 ${hoveredCard === service.id ? 'border-white/50' : ''}`} />
             </motion.div>
           ))}
         </div>
