@@ -56,7 +56,7 @@ export default function DesarrolloMovilPremiumPage() {
       id: 'ios',
       title: "Apps para iPhone y iPad",
       subtitle: "Experiencia premium para usuarios Apple",
-      description: "Desarrollamos apps nativas para iOS que aprovechan al máximo las capacidades de los dispositivos Apple. Rapidez, seguridad y diseño impecable.",
+      //description: "Desarrollamos apps nativas para iOS que aprovechan al máximo las capacidades de los dispositivos Apple. Rapidez, seguridad y diseño impecable.",
       icon: <FaApple className="text-4xl" />,
       color: "from-gray-800 to-gray-900",
       
@@ -144,7 +144,7 @@ export default function DesarrolloMovilPremiumPage() {
       id: 'android',
       title: "Apps para Android",
       subtitle: "Alcanza a millones de usuarios Android",
-      description: "Desarrollamos apps nativas para Android que funcionan perfectamente en miles de dispositivos. Optimización, personalización y alcance masivo.",
+      //description: "Desarrollamos apps nativas para Android que funcionan perfectamente en miles de dispositivos. Optimización, personalización y alcance masivo.",
       icon: <FaAndroid className="text-4xl" />,
       color: "from-green-500 to-emerald-600",
       
@@ -355,7 +355,7 @@ export default function DesarrolloMovilPremiumPage() {
 
   // Sección de Contacto Directo Mejorada
   const ContactDirectSection = () => (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl shadow-xl p-8 text-white">
+    <div className="bg-gradient-to-r from-blue-600 to-[#1c3D5B] rounded-2xl shadow-xl p-8 text-white">
       <div className="text-center">
         <div className="flex justify-center mb-6">
           <div className="bg-white/20 p-4 rounded-full">
@@ -433,15 +433,6 @@ export default function DesarrolloMovilPremiumPage() {
               <br />Sin <span className="text-pink-300">Complicaciones Técnicas</span>
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl text-gray-300 mb-8"
-            >
-              Creamos aplicaciones móviles que no solo se ven increíbles, sino que también 
-              funcionan perfectamente y generan resultados para tu negocio.
-            </motion.p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               {[
@@ -456,53 +447,11 @@ export default function DesarrolloMovilPremiumPage() {
                 </div>
               ))}
             </div>
-
-            <motion.button
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              onClick={() => {
-                setSelectedPlan('Consulta Inicial para App');
-                setShowContactForm(true);
-              }}
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-            >
-              Quiero Mi App Móvil
-            </motion.button>
           </div>
         </div>
       </section>
 
-      {/* Estadísticas Impactantes */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "150+", label: "Apps Desarrolladas", icon: <FiDownload />, color: "blue" },
-              { number: "4.8★", label: "Rating Promedio", icon: <FaGooglePlay />, color: "green" },
-              { number: "15M+", label: "Descargas Totales", icon: <FiSmartphone />, color: "purple" },
-              { number: "99%", label: "Clientes Satisfechos", icon: <FiThumbsUp />, color: "pink" }
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="text-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <div className={`inline-flex p-3 bg-${stat.color}-100 text-${stat.color}-600 rounded-full mb-4`}>
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sección para no técnicos */}
+      {/* Sección para info de enganche */}
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-3xl p-8 mb-12 border border-cyan-200 shadow-lg">
@@ -661,42 +610,6 @@ export default function DesarrolloMovilPremiumPage() {
                 </div>
               </div>
 
-              {/* Caso de Éxito */}
-              <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-xl p-8 text-white">
-                <div className="text-center mb-8">
-                  <FiStar className="text-yellow-300 text-4xl mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold">Historia Real de Éxito</h3>
-                  <p className="text-gray-300">Cómo ayudamos a un negocio como el tuyo</p>
-                </div>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  <div className="bg-white/10 p-6 rounded-xl">
-                    <div className="font-semibold text-blue-300 mb-2 flex items-center gap-2">
-                      <FaLightbulb /> El Desafío
-                    </div>
-                    <p className="text-gray-300">{activeServiceData.caseStudy.challenge}</p>
-                  </div>
-                  <div className="bg-white/10 p-6 rounded-xl">
-                    <div className="font-semibold text-green-300 mb-2 flex items-center gap-2">
-                      <FiCheck /> Nuestra Solución
-                    </div>
-                    <p className="text-gray-300">{activeServiceData.caseStudy.solution}</p>
-                  </div>
-                  <div className="bg-white/10 p-6 rounded-xl">
-                    <div className="font-semibold text-yellow-300 mb-2 flex items-center gap-2">
-                      <FiTrendingUp /> Resultados
-                    </div>
-                    <div className="space-y-3">
-                      {activeServiceData.caseStudy.results.map((result, idx) => (
-                        <div key={idx} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-300 rounded-full"></div>
-                          <span>{result}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -716,7 +629,7 @@ export default function DesarrolloMovilPremiumPage() {
 
           <div className="relative">
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 
-                          bg-gradient-to-r from-blue-400 to-cyan-400 transform -translate-y-1/2" />
+                          bg-gradient-to-r from-#1c3D5B] to-cyan-40 transform -translate-y-1/2" />
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {processSteps.map((step, index) => (

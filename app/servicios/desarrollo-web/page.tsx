@@ -29,7 +29,7 @@ import {
   FiUsers, FiZap
 } from 'react-icons/fi';
 
-// Componente de formulario (el que creamos arriba)
+// Componente de formulario
 import ContactFormModal from '../contacForm';
 
 export default function PremiumWebDevelopmentPage() {
@@ -37,7 +37,6 @@ export default function PremiumWebDevelopmentPage() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState('');
 
-  // Secciones amigables para no técnicos
   const forNonTechSection = {
     title: "¿No eres experto en tecnología? ¡Perfecto!",
     subtitle: "Hacemos que el desarrollo web sea fácil y comprensible para todos",
@@ -68,7 +67,7 @@ export default function PremiumWebDevelopmentPage() {
   const services = [
     {
       id: 'frontend',
-      title: "Tu Sitio Web que Impresiona",
+      title: "Web que Impresiona",
       subtitle: "La cara digital de tu negocio que atrae y convierte clientes",
       description: "Creamos sitios web que no solo se ven increíbles, sino que también funcionan perfectamente en celulares y computadoras. Hacemos que tu negocio destaque online.",
       icon: <FiGlobe className="text-4xl" />,
@@ -77,13 +76,13 @@ export default function PremiumWebDevelopmentPage() {
       packages: [
         {
           name: 'Sitio Web Inicial',
-          price: '$8,500',
+          price: 'Desde $200',
           features: [
             'Diseño moderno y profesional',
             'Funciona perfecto en celulares',
             'Fácil de actualizar tú mismo',
             'Aparece en Google fácilmente',
-            'Listo en 6 semanas',
+            'Listo en 1 a 6 semanas',
             'Ayuda por 3 meses'
           ],
           bestFor: 'Para empezar tu presencia online',
@@ -91,7 +90,7 @@ export default function PremiumWebDevelopmentPage() {
         },
         {
           name: 'Sitio Web Avanzado',
-          price: '$18,500',
+          price: 'Desde $600',
           features: [
             'Diseño totalmente personalizado',
             'Sistema de cotizaciones online',
@@ -158,12 +157,12 @@ export default function PremiumWebDevelopmentPage() {
       subtitle: "Todo lo que tu negocio necesita en una sola plataforma",
       description: "Desarrollamos sistemas completos que manejan todo: clientes, inventario, ventas y más. Todo integrado y fácil de usar para tu equipo.",
       icon: <FiLayers className="text-4xl" />,
-      color: 'from-green-500 to-emerald-400',
+      color: 'from-amber-500 to-[#CBa135]',
       
       packages: [
         {
           name: 'Sistema Básico',
-          price: '$25,000',
+          price: 'Desde $650',
           features: [
             'Gestión de clientes',
             'Control de inventario simple',
@@ -177,7 +176,7 @@ export default function PremiumWebDevelopmentPage() {
         },
         {
           name: 'Sistema Avanzado',
-          price: '$65,000',
+          price: 'Desde $2,500',
           features: [
             'Multi-usuario simultáneo',
             'Sistema de pagos integrado',
@@ -191,7 +190,7 @@ export default function PremiumWebDevelopmentPage() {
         },
         {
           name: 'Sistema Empresarial',
-          price: 'Desde $120,000',
+          price: 'Desde $5,000',
           features: [
             'Miles de productos',
             'Múltiples formas de pago',
@@ -224,17 +223,6 @@ export default function PremiumWebDevelopmentPage() {
           icon: <FiUsers />
         }
       ],
-
-      caseStudy: {
-        client: 'Clínica SaludTotal',
-        challenge: 'Sistema manual, citas perdidas',
-        solution: 'Sistema web con reservas online',
-        results: [
-          'Lanzado en 4 meses',
-          '10,000 pacientes en primer mes',
-          '300% retorno en 5 meses'
-        ]
-      }
     }
   ];
 
@@ -247,7 +235,7 @@ export default function PremiumWebDevelopmentPage() {
 
   // Sección de Contacto Directo Mejorada
   const ContactDirectSection = () => (
-    <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl shadow-xl p-8 text-white">
+    <div className="bg-gradient-to-r from-[#1c3D5B] to-cyan-500 rounded-2xl shadow-xl p-8 text-white">
       <div className="text-center">
         <div className="flex justify-center mb-6">
           <div className="bg-white/20 p-4 rounded-full">
@@ -302,7 +290,7 @@ export default function PremiumWebDevelopmentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section Mejorada */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-gray-900 to-purple-900 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-br via-[#1c3D5B] from-[#2908F1] to-[#4A4A4A] text-white">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative">
           <motion.div
@@ -310,17 +298,17 @@ export default function PremiumWebDevelopmentPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 text-[#F3F4F6]">
               <FiCode />
               DESARROLLO WEB SIN COMPLICACIONES
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#F3F4F6]">
               Tu <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Sitio Web Perfecto</span>,
-              <br />Sin <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Dolor de Cabeza</span>
+              <br />Sin <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Dolor de Cabeza</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
               Creamos sitios web que realmente funcionan para tu negocio. 
               Sin términos técnicos complicados, sin sorpresas. Solo resultados que puedes ver y medir.
             </p>
@@ -344,7 +332,7 @@ export default function PremiumWebDevelopmentPage() {
                 setSelectedPlan('Consulta Inicial Gratuita');
                 setShowContactForm(true);
               }}
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-gradient-to-r from-[#CBA135] to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               Quiero Mi Sitio Web
             </button>
@@ -382,7 +370,7 @@ export default function PremiumWebDevelopmentPage() {
         {/* Navegación de servicios */}
         <div className="mb-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            ¿Qué necesitas para tu negocio?
+            ¿Qué necesitas para tu negocio, elige tu plan?
           </h3>
           <div className="flex flex-wrap gap-2 justify-center">
             {services.map((service) => (
@@ -501,43 +489,6 @@ export default function PremiumWebDevelopmentPage() {
                     </button>
                   </motion.div>
                 ))}
-              </div>
-            </div>
-
-            {/* Caso de Éxito */}
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-xl p-8 text-white">
-              <div className="text-center mb-8">
-                <FiStar className="text-yellow-300 text-4xl mx-auto mb-4" />
-                <h3 className="text-2xl font-bold">Historia de Éxito</h3>
-                <p className="text-gray-300">Un cliente como tú que logró grandes resultados</p>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="bg-white/10 p-6 rounded-xl">
-                  <div className="font-semibold text-blue-300 mb-2 flex items-center gap-2">
-                    <FaLightbulb /> El Desafío
-                  </div>
-                  <p className="text-gray-300">{activeServiceData.caseStudy.challenge}</p>
-                </div>
-                <div className="bg-white/10 p-6 rounded-xl">
-                  <div className="font-semibold text-green-300 mb-2 flex items-center gap-2">
-                    <FiCheck /> Nuestra Solución
-                  </div>
-                  <p className="text-gray-300">{activeServiceData.caseStudy.solution}</p>
-                </div>
-                <div className="bg-white/10 p-6 rounded-xl">
-                  <div className="font-semibold text-yellow-300 mb-2 flex items-center gap-2">
-                    <FiTrendingUp /> Resultados
-                  </div>
-                  <div className="space-y-3">
-                    {activeServiceData.caseStudy.results.map((result, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-300 rounded-full"></div>
-                        <span>{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
 
